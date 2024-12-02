@@ -9,10 +9,10 @@ createRoot(document.getElementById('root')).render(
     <App />
   </StrictMode>,
   <div className="header">
-  <span>Seite 1</span>
-  <span>Seite 2</span>
-  <span>Seite 3</span>
-  <span>Seite 4</span>
+    <a href="#home">Home</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+    <a href="#about">About</a>
   </div>
   <section>
     <h1 className='h1'>Überschrift 1</h1>
