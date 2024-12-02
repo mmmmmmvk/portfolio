@@ -4,17 +4,19 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import { Canvas } from '@react-three/fiber'
 import { Experience } from './components/Experience'
-import { Environment, Html } from '@react-three/drei'
+import { Environment } from '@react-three/drei'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
+    <div style={{ width: "100vw", height: "100vh" }}>
     <Canvas>
       <Experience />
       <directionalLight intensity={2} position={[0, 2, 3]}/>
       <Environment preset="city" />
     </Canvas>
+    </div>
   )
 }
 

@@ -25,7 +25,7 @@ export function Dispersioncube(props) {
         anisotropy: { value: 0.1, min: 0, max: 1, step: 0.01 },
         distortion: { value: 1, min: 0, max: 1, step: 0.01 },
         distortionScale: { value: 0.3, min: 0.01, max: 1, step: 0.01 },
-        clearcoat: { value: 1, min: 0, max: 1 },
+        clearcoat: { value: 0, min: 0, max: 1 },
         attenuationColor: '#ffffff',
         color: '#ffffff',
         bg: '#000000'
@@ -34,7 +34,7 @@ export function Dispersioncube(props) {
   const { nodes, materials } = useGLTF('./models/dispersioncube.gltf')
   return (
     <group dispose={null}>
-        <Text>TestTestTest</Text>
+        <Text>test</Text>
       <mesh geometry={nodes.Würfel.geometry} /*material={materials.Mat}*/ >
       {config.meshPhysicalMaterial ? <meshPhysicalMaterial {...config} /> : <MeshTransmissionMaterial background={new THREE.Color(config.bg)} {...config} />} 
       </mesh>
