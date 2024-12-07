@@ -1,16 +1,16 @@
 @font-face {
   font-family: 'Geist Regular';
-  src: url('public/fonts/Geist-Regular.woff2');
+  src: url('/fonts/Geist-Regular.woff2');
 }
 
 @font-face {
   font-family: 'Geist Light';
-  src: url('public/fonts/Geist-Light.woff2');
+  src: url('/fonts/Geist-Light.woff2');
 }
 
 @font-face {
   font-family: 'Geist ExtraLight';
-  src: url('public/fonts/Geist-ExtraLight.woff2');
+  src: url('/fonts/Geist-ExtraLight.woff2');
 }
 
 
@@ -21,13 +21,14 @@ body, html {
 }
 
 .container {
-  padding: 2rem;
+  padding-top: 2rem;
 }
 
 .slider-wrapper {
   position: relative;
-  max-width: 24rem;
+  max-width: 32rem;
   margin: 0 auto;
+  border: 2px solid #ffffff;
 }
 
 .slider {
@@ -69,6 +70,36 @@ body, html {
   opacity: 1;
 }
 
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5rem;
+}
+
+.slider-button:hover {
+  background-color: #000000;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  transition: all 0.3s ease-in-out;
+}
+
+.slider-button {
+  max-width: 8rem;
+  background-color: #ffffff;
+  color: #000000;
+  font-family: 'Geist Regular', sans-serif;
+  margin-top: 4rem;
+  padding: 1rem 6rem;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 auto;
+  font-size: 1.5rem;
+}
+
 h1 {
   color: white;
   font-family: 'Geist Regular', sans-serif;
@@ -83,12 +114,13 @@ h1 {
 .projectpreview {
   color: white;
   font-family: 'Geist Light', sans-serif;
-  font-size: 2.5em;
+  font-size: 5em;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0;
-  padding-left: 3vw;
+  padding-top: 7.5vh;
+  padding-bottom: 7.5vh;
 }
 
 h2 {
@@ -105,8 +137,8 @@ h2 {
 
 .introduction {
   border-top: 1px solid #ffffff;
-  padding-top: 30vh;
-  padding-bottom: 30vh;
+  padding-top: 15vh;
+  padding-bottom: 15vh;
 }
 
 .projects-main {

@@ -14,7 +14,7 @@ function App() {
     <Canvas>
       <Experience />
       <directionalLight intensity={2} position={[0, 2, 3]}/>
-      <Environment files="public/img/studio_hdri.hdr" environmentIntensity={5} />
+      <Environment files="/img/studio_hdri.hdr" environmentIntensity={5} />
     </Canvas>
     </div>
   )

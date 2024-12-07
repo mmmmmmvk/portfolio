@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from "motion/react";
+import { color, motion } from "motion/react";
 
 const fadeInAnimationVariants = {
     initial: {
