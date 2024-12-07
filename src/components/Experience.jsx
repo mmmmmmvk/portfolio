@@ -1,12 +1,12 @@
-import { OrbitControls } from "@react-three/drei"
-import { Dispersioncube } from "./Dispersioncube"
+import { Environment, OrbitControls, Stage, Stars, PresentationControls } from "@react-three/drei"
+import { Wordmark } from "./Wordmark"
 
 export const Experience = () => {
     return (
         <>
-        <ambientLight intensity={1} />
-        <OrbitControls enableZoom={false} autoRotate={true}/>
-        <Dispersioncube />
+        <ambientLight intensity={200} />
+        <OrbitControls autoRotate={true} autoRotateSpeed={5} enablePan={false} enableZoom={false} enableRotate={true} />
+        <Wordmark scale={[50,50,50]} />
         </>
     )
 }
