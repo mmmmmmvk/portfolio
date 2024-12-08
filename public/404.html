@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Page Not Found</title>
+    <meta http-equiv="refresh" content="0; URL=/" />
+    <script>
+      // Preserve the current path and redirect to the root URL
+      // React Router will handle the routing based on the URL path
+      (function() {
+        var currentPath = window.location.pathname;
+        window.location.href = "/#" + currentPath;
+      })();
+    </script>
+  </head>
+  <body>
+  </body>
+</html>

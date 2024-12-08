@@ -125,6 +125,10 @@ h1 {
 }
 
 .projects {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
   padding-top: 10vh;
 }
 
@@ -160,26 +164,27 @@ h2 {
   display: unset;
   pointer-events: auto;
   position: fixed;
-  background-color: #ffffff;
+  background-color: #000000;
   padding: 20px;
   top: 0;
   left: 0;
-  color: #ffffff;
   font-family: 'Geist Regular', sans-serif;
   font-weight: 900;
   font-size: 1em;
   width: 100%;
   text-align: center;
   z-index: 1;
+  border-bottom: 1px solid #ffffff;
 }
 
 .header > a {
-  color: #000000;
+  color: #ffffff;
   text-decoration: none;
   padding: 0 3.25em;
   letter-spacing: 0em;
   position: relative;
 }
+
 
 
 

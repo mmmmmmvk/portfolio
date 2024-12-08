@@ -3,6 +3,7 @@ import { motion } from "motion/react"
 import One from '/img/img-1.jpg'
 import Two from '/img/img-2.jpg'
 import Three from '/img/img-3.jpg'
+import { Link } from 'react-router-dom'
 
 const fadeInAnimationVariants = {
     initial: {
@@ -55,7 +56,7 @@ const Slider = () => {
     whileInView="animate"
     viewport={{once: true,}}
     transition={{ duration: 0.7, delay: 0, ease: "easeInOut" }}>
-        <a className="slider-button" href="#projects">View More</a>
+        <Link to="/projects" className="slider-button">View More</Link>
     </motion.div>
     </motion.div>
   )
