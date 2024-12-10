@@ -78,16 +78,16 @@ body, html {
 }
 
 .slider-button:hover {
-  background-color: #000000;
-  color: #ffffff;
+  background-color: #ffffff;
+  color: #000000;
   border: 2px solid #ffffff;
   transition: all 0.3s ease-in-out;
 }
 
 .slider-button {
   max-width: 8rem;
-  background-color: #ffffff;
-  color: #000000;
+  background-color: #000000;
+  color: #ffffff;
   font-family: 'Geist Regular', sans-serif;
   margin-top: 4rem;
   padding: 1rem 3rem;
@@ -98,6 +98,7 @@ body, html {
   align-items: center;
   flex: 0 0 auto;
   font-size: 1rem;
+  border: 2px solid #ffffff;
   border-radius: 2rem;
 }
 
