@@ -7,9 +7,7 @@ import App from './App.jsx'
 import Projects from './components/Projects.jsx'
 import Contact from './components/Contact.jsx'
 import About from './components/About.jsx'
-import Introduction from './components/Introduction.jsx'
-import Projectpreview from './components/Projectpreview.jsx'
-import Slider from './components/Slider.jsx'
+
 
 
 createRoot(document.getElementById('root')).render(
@@ -26,7 +24,7 @@ createRoot(document.getElementById('root')).render(
         </div>
         <Routes>
           <Route path="/" element={<App />} />
-          <Route path="/projects" element={<Projects />} />
+          <Route path="/projects" element={<Projects />} /> 
           <Route path="/contact" element={<Contact />} />
           <Route path="/about" element={<About />} />
         </Routes>

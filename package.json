@@ -1,5 +1,5 @@
 {
-  "homepage": "https://mmmmmmvk.github.io/mmmmmmvk.github.io",
+  "homepage": "https://vdovkin.net",
   "name": "mmmmmmvk-portfolio",
   "private": true,
   "version": "0.0.0",
@@ -24,7 +24,8 @@
     "react-dom": "^18.3.1",
     "react-router-dom": "^7.0.2",
     "swiper": "^11.1.15",
-    "three": "^0.171.0"
+    "three": "^0.171.0",
+    "vanilla-tilt": "^1.8.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.15.0",

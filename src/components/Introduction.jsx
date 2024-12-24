@@ -30,7 +30,7 @@ const Introduction = () => {
     initial="initial"
     whileInView="animate"
     viewport={{once: true,}}
-    transition={{ duration: 0.7, delay: 0, ease: "easeInOut" }}>
+    transition={{ duration: 0.5, delay: 0, ease: "easeInOut" }}>
         I'm a Designer based in Potsdam, Germany.
     </motion.h2>
     </div>

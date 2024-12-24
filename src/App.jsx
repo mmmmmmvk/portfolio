@@ -6,7 +6,10 @@ import { Experience } from './components/Experience'
 import { Environment } from '@react-three/drei'
 import Introduction from './components/Introduction'
 import Projectpreview from './components/Projectpreview'
-import Slider from './components/Slider'
+import Tilt from './components/Tilt'
+
+
+
 
 
 function App() {
@@ -28,7 +31,7 @@ function App() {
         </section>
         <section className="projects-main">
           <Projectpreview />
-          <Slider />
+          <Tilt />
         </section>
       </div>
     </div>
