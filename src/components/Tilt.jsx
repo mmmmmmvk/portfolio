@@ -74,7 +74,7 @@ const fadeInAnimationVariants2 = {
       whileInView="animate"
       viewport={{once: true,}}
       transition={{ duration: 0.7, delay: 0, ease: "easeInOut" }}>
-        <img src="https://picsum.photos/300" alt="Tilted Image 1" />
+        <img src="https://placehold.co/300" alt="Tilted Image 1" />
       </motion.div>
       <motion.div className="tilt-item tilt-item-2" ref={tiltRef2}
       variants={fadeInAnimationVariants}
@@ -82,7 +82,7 @@ const fadeInAnimationVariants2 = {
       whileInView="animate"
       viewport={{once: true,}}
       transition={{ duration: 0.7, delay: 0.2, ease: "easeInOut" }}>
-        <img src="https://picsum.photos/300" alt="Tilted Image 2" />
+        <img src="https://placehold.co/300" alt="Tilted Image 2" />
       </motion.div>
       <motion.div className="tilt-item tilt-item-3" ref={tiltRef3}
       variants={fadeInAnimationVariants}
@@ -90,7 +90,7 @@ const fadeInAnimationVariants2 = {
       whileInView="animate"
       viewport={{once: true,}}
       transition={{ duration: 0.7, delay: 0.4, ease: "easeInOut" }}>
-        <img src="https://picsum.photos/300" alt="Tilted Image 3" />
+        <img src="https://placehold.co/300" alt="Tilted Image 3" />
       </motion.div>
       <motion.div className="tilt-item tilt-item-4" ref={tiltRef4}
       variants={fadeInAnimationVariants}
@@ -98,7 +98,7 @@ const fadeInAnimationVariants2 = {
       whileInView="animate"
       viewport={{once: true,}}
       transition={{ duration: 0.7, delay: 0.6, ease: "easeInOut" }}>
-        <img src="https://picsum.photos/300" alt="Tilted Image 4" />
+        <img src="https://placehold.co/300" alt="Tilted Image 4" />
       </motion.div>
     </div>
       <motion.div className="button-container"

@@ -34,7 +34,7 @@ export function Wordmark(props) {
   const { nodes, materials } = useGLTF('./models/wordmark.gltf')
   return (
     <>
-    <Leva hidden/>
+    <Leva hidden />
     <group  {...props} dispose={null}>
       <mesh geometry={nodes['Voronoi-Bruch'].geometry} >
       {config.meshPhysicalMaterial ? <meshPhysicalMaterial {...config} /> : <MeshTransmissionMaterial background={new THREE.Color(config.bg)} {...config} />} 
