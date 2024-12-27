@@ -7,6 +7,7 @@ import { Environment } from '@react-three/drei'
 import Introduction from './components/Introduction'
 import Projectpreview from './components/Projectpreview'
 import Tilt from './components/Tilt'
+import Skills from './components/Skills'
 
 
 
@@ -17,7 +18,7 @@ function App() {
 
   return (
     <div>
-      <div style={{ width: "100vw", height: "100vh" }}>
+      <div style={{ height: '100vh', width: '100vw' }}>
         <Canvas>
           <Experience />
           <directionalLight intensity={2} position={[0, 2, 3]} />
@@ -25,9 +26,12 @@ function App() {
         </Canvas>
       </div>
       <div>
-        <section className="canvas"></section>
+
         <section className="introduction">
           <Introduction />
+        </section>
+        <section className="skills">
+          <Skills />
         </section>
         <section className="projects-main">
           <Projectpreview />

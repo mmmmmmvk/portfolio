@@ -13,11 +13,29 @@
   src: url('/fonts/Geist-ExtraLight.woff2');
 }
 
-@media (max-width: 1441px) {
-  .tilt-container {
-    flex-direction: column;
-  }
+.header {
+  display: unset;
+  pointer-events: auto;
+  position: fixed;
+  background-color: #000000;
+  padding: 20px;
+  top: 0;
+  left: 0;
+  font-family: 'Geist Regular', sans-serif;
+  font-weight: 900;
+  font-size: 1em;
+  width: 100%;
+  text-align: center;
+  z-index: 1;
+  border-bottom: 1px solid #ffffff;
+}
 
+.header > a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0 3.25em;
+  letter-spacing: 0em;
+  position: relative;
 }
 
 
@@ -133,7 +151,7 @@ h1 {
   justify-content: center;
   align-items: center;
   margin: 0;
-  padding-left: 0vw;
+  padding-left: 3vw;
   padding-top: 7.5vh;
   padding-bottom: 7.5vh;
 }
@@ -205,6 +223,30 @@ h2 {
   padding-bottom: 15vh;
 }
 
+.skills {
+  border-top: 1px solid #ffffff;
+  padding-top: 15vh;
+  padding-bottom: 15vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Center the grid container */
+}
+
+.skill-1, .skill-2, .skill-3 {
+  display: grid;
+  grid-template-columns: auto 50px; /* Allocate more space to the text and less to the image */
+  align-items: center; /* Vertically align items */
+  gap: 1vw; /* Reduce the space between text and image */
+  margin-bottom: 2rem; /* Add some space between skill items */
+  max-width: 600px; /* Set a max-width for the grid container */
+  width: 100%; /* Ensure the grid container takes full width up to max-width */
+}
+
+.skill-1 img, .skill-2 img, .skill-3 img {
+  width: 50px; /* Set a consistent width for images */
+  height: auto; /* Maintain aspect ratio */
+}
+
 .projects-main {
   border-top: 1px solid #ffffff;
   display: flex;
@@ -215,35 +257,6 @@ h2 {
   padding-top: 5vh;
 }
 
-.header {
-  display: unset;
-  pointer-events: auto;
-  position: fixed;
-  background-color: #000000;
-  padding: 20px;
-  top: 0;
-  left: 0;
-  font-family: 'Geist Regular', sans-serif;
-  font-weight: 900;
-  font-size: 1em;
-  width: 100%;
-  text-align: center;
-  z-index: 1;
-  border-bottom: 1px solid #ffffff;
-}
-
-.header > a {
-  color: #ffffff;
-  text-decoration: none;
-  padding: 0 3.25em;
-  letter-spacing: 0em;
-  position: relative;
-}
-
-
-
-
-
 html {
   scroll-snap-type: y mandatory;
 }
@@ -252,4 +265,69 @@ html {
   display: unset;
   scroll-snap-align: start;
   height: 100vh;
+}
+
+@media (max-width: 1482px) {
+  .tilt-container {
+    flex-direction: column;
+  }
+
+  .projectpreview {
+    padding-left: 5vw;
+    padding-right: 5vw;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .introduction {
+    padding-left: 5vw;
+    padding-right: 5vw;
+    text-align: center;
+    justify-content: center;
+  }
+
+}
+
+@media (max-width: 920px) {
+
+  .header {
+    display: none;
+  }
+
+  .skills {
+    padding-left: 10vw;
+    padding-right: 10vw;
+  }
+
+  h1,h2 {
+    text-align: center;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .skills {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .skill-1 img, .skill-2 img, .skill-3 img {
+    display: none;
+  }
+
+  .skill-1, .skill-2, .skill-3 {
+    display: flex;
+    flex: auto;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    max-width: unset;
+  }
+
+  .projectpreview {
+    padding-left: 10vw;
+    padding-right: 10vw;
+  }
+
 }

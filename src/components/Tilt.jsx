@@ -39,28 +39,28 @@ const fadeInAnimationVariants2 = {
       VanillaTilt.init(tiltRef1.current, {
         max: 50,
         speed: 400,
-        perspective: 500,
+        perspective: 1000,
       });
     }
     if (tiltRef2.current) {
       VanillaTilt.init(tiltRef2.current, {
         max: 50,
         speed: 400,
-        perspective: 500,
+        perspective: 1000,
       });
     }
     if (tiltRef3.current) {
       VanillaTilt.init(tiltRef3.current, {
         max: 50,
         speed: 400,
-        perspective: 500,
+        perspective: 1000,
       });
     }
     if (tiltRef4.current) {
         VanillaTilt.init(tiltRef4.current, {
           max: 50,
           speed: 400,
-          perspective: 500,
+          perspective: 1000,
         });
       }
   }, []);
