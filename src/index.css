@@ -13,6 +13,12 @@
   src: url('/fonts/Geist-ExtraLight.woff2');
 }
 
+
+.wordmark {
+  width: 100vw;
+  height: 100vh;
+}
+
 .header {
   display: unset;
   pointer-events: auto;
@@ -267,6 +273,79 @@ html {
   height: 100vh;
 }
 
+.hamburger-menu {
+  position: relative;
+  display: none;
+}
+
+.hamburger-icon {
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.hamburger-icon.hidden {
+  display: none;
+}
+
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.close-icon {
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.menu-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 2rem;
+  margin: 10px 0;
+  font-family: 'Geist Regular', sans-serif;
+}
+
+.wordmark {
+  display: unset;
+}
+
+.wordmarksection {
+  height: 100vh;
+}
+
+.wordmarksectionmobile {
+  height: 100vh;
+  display: none;
+}
+
 @media (max-width: 1482px) {
   .tilt-container {
     flex-direction: column;
@@ -286,6 +365,10 @@ html {
     justify-content: center;
   }
 
+  .skills {
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
 }
 
 @media (max-width: 920px) {
@@ -294,15 +377,46 @@ html {
     display: none;
   }
 
+  .hamburger-menu {
+    display: block;
+  }
+
+  .wordmarksection {
+    height: 60vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+
+  canvas {
+    overflow-y: scroll;
+  }
+
+  .wordmarksectionmobile {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: scroll;
+  }
+
   .skills {
     padding-left: 10vw;
     padding-right: 10vw;
   }
 
-  h1,h2 {
+  h1 {
     text-align: center;
     justify-content: center;
     padding: 0;
+    font-size: 2em;
+  }
+
+  h2 {
+    text-align: center;
+    justify-content: center;
+    padding: 0;
+    font-size: 1.5em;
   }
 
   .skills {
@@ -325,7 +439,12 @@ html {
     max-width: unset;
   }
 
+  .projects-main {
+    padding-top: 0;
+  }
+
   .projectpreview {
+    font-size: 2em;
     padding-left: 10vw;
     padding-right: 10vw;
   }

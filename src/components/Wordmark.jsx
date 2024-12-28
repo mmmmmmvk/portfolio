@@ -7,6 +7,7 @@ import * as THREE from 'three'
 import React from 'react'
 import { useGLTF, PerspectiveCamera, MeshTransmissionMaterial } from '@react-three/drei'
 import { useControls, Leva } from 'leva'
+import { useThree } from '@react-three/fiber'
 
 export function Wordmark(props) {
 
@@ -28,14 +29,15 @@ export function Wordmark(props) {
         reflectivity: { value: 0.43, min: 0, max: 1 },
         attenuationColor: '#ffffff',
         color: '#ffffff',
-        bg: '#000000'
+        bg: '#000000',
     })
 
   const { nodes, materials } = useGLTF('./models/wordmark.gltf')
+  const { viewport } = useThree()
   return (
     <>
-    <Leva hidden />
-    <group  {...props} dispose={null}>
+    <Leva hidden/>
+    <group className="wordmark"  {...props} dispose={null} scale={viewport.width+280 / viewport.height}>
       <mesh geometry={nodes['Voronoi-Bruch'].geometry} >
       {config.meshPhysicalMaterial ? <meshPhysicalMaterial {...config} /> : <MeshTransmissionMaterial background={new THREE.Color(config.bg)} {...config} />} 
       </mesh>

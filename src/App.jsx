@@ -3,11 +3,12 @@ import reactLogo from './assets/react.svg'
 import './App.css'
 import { Canvas } from '@react-three/fiber'
 import { Experience } from './components/Experience'
-import { Environment } from '@react-three/drei'
+import { Environment, OrbitControls } from '@react-three/drei'
 import Introduction from './components/Introduction'
 import Projectpreview from './components/Projectpreview'
 import Tilt from './components/Tilt'
 import Skills from './components/Skills'
+import { Experiencemobile } from './components/Experiencemobile'
 
 
 
@@ -18,9 +19,19 @@ function App() {
 
   return (
     <div>
-      <div style={{ height: '100vh', width: '100vw' }}>
+      <div className="hamburgermenu">
+
+      </div>
+      <div className="wordmarksection">
         <Canvas>
           <Experience />
+          <directionalLight intensity={2} position={[0, 2, 3]} />
+          <Environment files="/img/studio_hdri.hdr" environmentIntensity={5} />
+        </Canvas>
+      </div>
+      <div className="wordmarksectionmobile">
+        <Canvas>
+          <Experiencemobile />
           <directionalLight intensity={2} position={[0, 2, 3]} />
           <Environment files="/img/studio_hdri.hdr" environmentIntensity={5} />
         </Canvas>
