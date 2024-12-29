@@ -1,56 +1,22 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
-import { Canvas } from '@react-three/fiber'
-import { Experience } from './components/Experience'
-import { Environment, OrbitControls } from '@react-three/drei'
-import Introduction from './components/Introduction'
-import Projectpreview from './components/Projectpreview'
-import Tilt from './components/Tilt'
-import Skills from './components/Skills'
-import { Experiencemobile } from './components/Experiencemobile'
-
-
-
-
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './components/Home.jsx';
+import Projects from './components/Projects.jsx';
+import Contact from './components/Contact.jsx';
+import About from './components/About.jsx';
+import ScrollToTop from './components/ScrollToTop.jsx';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div>
-      <div className="hamburgermenu">
-
-      </div>
-      <div className="wordmarksection">
-        <Canvas>
-          <Experience />
-          <directionalLight intensity={2} position={[0, 2, 3]} />
-          <Environment files="/img/studio_hdri.hdr" environmentIntensity={5} />
-        </Canvas>
-      </div>
-      <div className="wordmarksectionmobile">
-        <Canvas>
-          <Experiencemobile />
-          <directionalLight intensity={2} position={[0, 2, 3]} />
-          <Environment files="/img/studio_hdri.hdr" environmentIntensity={5} />
-        </Canvas>
-      </div>
-      <div>
-
-        <section className="introduction">
-          <Introduction />
-        </section>
-        <section className="skills">
-          <Skills />
-        </section>
-        <section className="projects-main">
-          <Projectpreview />
-          <Tilt />
-        </section>
-      </div>
-    </div>
-  )
+    <BrowserRouter>
+      <ScrollToTop />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;

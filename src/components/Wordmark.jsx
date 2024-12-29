@@ -36,6 +36,7 @@ export function Wordmark(props) {
   const { viewport } = useThree()
   return (
     <>
+    <Leva hidden/>
     <group className="wordmark"  {...props} dispose={null} scale={viewport.width+280 / viewport.height}>
       <mesh geometry={nodes['Voronoi-Bruch'].geometry} >
       {config.meshPhysicalMaterial ? <meshPhysicalMaterial {...config} /> : <MeshTransmissionMaterial background={new THREE.Color(config.bg)} {...config} />} 
