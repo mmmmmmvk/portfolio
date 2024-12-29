@@ -48,8 +48,6 @@
 
 html {
   overflow-y: scroll;
-  background: rgb(40,40,48);
-  background: linear-gradient(90deg, rgba(40,40,48,1) 0%, rgba(10,33,255,1) 57%, rgba(255,17,17,1) 100%);
 }
 
 body, html {
