@@ -22,13 +22,26 @@ const ProjectOverview = ({ project }) => {
         transition = {{ duration: 0.5, ease: "easeInOut" }}
       />
       {isOpen && (
-        <div className="modal-overlay" onClick={toggleModal}>
-          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <button className="close-button" onClick={toggleModal}>
+        <div className="modal-overlay" 
+          onClick={toggleModal}>
+          <div className="modal-content" 
+            onClick={(e) => e.stopPropagation()}>
+            <button className="close-button" 
+              onClick={toggleModal}>
               &times;
             </button>
-            <h2>{project.title}</h2>
-            <p>{project.description}</p>
+            <motion.h2 
+            initial = {{ opacity: 0, x: -100 }} 
+            whileInView = {{ opacity: 1, x: 0 }}
+            viewport={{once: true,}} 
+            exit = {{ opacity: 0 }} 
+            transition = {{ duration: 0.5, ease: "easeInOut" }}>{project.title}</motion.h2>
+            <motion.p
+            initial = {{ opacity: 0, x: -100 }} 
+            whileInView = {{ opacity: 1, x: 0 }}
+            viewport={{once: true,}} 
+            exit = {{ opacity: 0 }} 
+            transition = {{ duration: 0.5, delay: 0.2, ease: "easeInOut" }}>{project.description}</motion.p>
             {project.images.map((image, index) => (
               <img key={index} src={image} alt={`${project.title} ${index + 1}`} className="project-image" />
             ))}

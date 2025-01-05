@@ -2,33 +2,39 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import ProjectOverview from './ProjectOverview';
 import Navbar from './Navbar';
+import Footer from './Footer';
 
 const projectData = [
   {
-    title: 'Project 1',
-    previewImage: 'https://placehold.co/400',
-    description: 'Detailed description of Project 1.',
+    title: 'ROSALILAPINK',
+    previewImage: '/img/cover_5.png',
+    description: 'Lyran Dasz (2022)',
     images: [
-      'https://placehold.co/800x600',
-      'https://placehold.co/800x600',
+      '/img/cover_5.png',
     ],
   },
   {
-    title: 'Project 2',
-    previewImage: 'https://placehold.co/400',
-    description: 'Detailed description of Project 2.',
+    title: '4lifer',
+    previewImage: '/img/cover_2.jpg',
+    description: 'swagboipi (2022)',
     images: [
-      'https://placehold.co/800x600',
-      'https://placehold.co/800x600',
+      '/img/cover_2.jpg',
     ],
   },
   {
-    title: 'Project 3',
-    previewImage: 'https://placehold.co/400',
-    description: 'Detailed description of Project 3.',
+    title: 'x-freund',
+    previewImage: '/img/cover_3.jpg',
+    description: 'swagboipi (2022)',
     images: [
-      'https://placehold.co/800x600',
-      'https://placehold.co/800x600',
+      'img/cover_3.jpg',
+    ],
+  },
+  {
+    title: 'lauf für dich',
+    previewImage: '/img/cover_1.jpg',
+    description: 'swagboipi (2022)',
+    images: [
+      'img/cover_1.jpg',
     ],
   },
 ];
@@ -52,10 +58,13 @@ const Projects = () => {
           transition={{ duration: 0.5, delay: 0.2, ease: "easeInOut" }}>
           cover artworks
         </motion.h2>
+        <div className="project-list">
         {projectData.map((project, index) => (
           <ProjectOverview key={index} project={project} />
         ))}
+        </div>
       </div>
+      <Footer />
     </>
   );
 };

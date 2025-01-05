@@ -9,8 +9,25 @@ import { Experience } from './Experience';
 import { Experiencemobile } from './Experiencemobile';
 import Navbar from './Navbar';
 import '../App.css';
+import { useEffect, useState } from 'react';
+import Footer from './Footer';
+
 
 function Home() {
+
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <div>
       <Navbar />
@@ -40,8 +57,13 @@ function Home() {
           <Tilt />
         </section>
       </div>
+      <div className="scroll-indicator" style={{ opacity: scrollY === 0 ? 1 : 0 }}>
+        <div className="scroll-bar"></div>
+      </div>
+      <Footer />
     </div>
   );
 }
+
 
 export default Home;

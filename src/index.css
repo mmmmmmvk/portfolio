@@ -13,6 +13,51 @@
   src: url('/fonts/Geist-ExtraLight.woff2');
 }
 
+.footer {
+  position: relative;
+  width: 100%;
+  background-color: #000000;
+  color: #ffffff;
+  text-align: center;
+  padding: 10px 0;
+  font-family: 'Geist Regular', sans-serif;
+  font-size: 1rem;
+  border-top: 1px solid #ffffff;
+}
+
+.scroll-indicator {
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+  width: 30px;
+  height: 85vh;
+  border: 3px solid #ffffff;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  transition: opacity 1s ease;
+}
+
+.scroll-bar {
+  width: 8px;
+  height: 40px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  animation: scroll 5s infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateY(-210px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(160px);
+    opacity: 0;
+  }
+}
 
 .wordmark {
   width: 100vw;
@@ -123,13 +168,17 @@ body, html {
 
 .project-overview {
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
   margin: auto;
   padding: 3vw;
 }
 
 .project-preview {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 20%;
   height: 20%;
   object-fit: cover;
@@ -142,6 +191,8 @@ body, html {
 .project-preview:hover {
   transform: scale(1.05);
 }
+
+
 
 .modal-overlay {
   position: fixed;
@@ -157,25 +208,37 @@ body, html {
 }
 
 .modal-content {
-  background-color: #ffffff;
+  background-color: #000000;
+  color: #ffffff;
   padding: 20px;
   border-radius: 10px;
   max-width: 800px;
-  width: 90%;
+  width: 30%;
   max-height: 90%;
   display: flex;
   flex-direction: column;
-  overflow-y: scroll;
+  overflow-y: auto;
   position: relative;
+}
+
+.modal-content h2 {
+  padding: 0;
+}
+
+.modal-content p {
+  font-family: 'Geist Light', sans-serif;
+  font-size: 1.5rem;
+  padding: 0;
 }
 
 .close-button {
   position: absolute;
   top: 10px;
   right: 10px;
-  font-size: 1.5rem;
+  font-size: 2rem;
   background: none;
   border: none;
+  color: #ffffff;
   cursor: pointer;
 }
 
@@ -235,6 +298,7 @@ h1 {
   white-space: nowrap;
   padding-top: 10vh;
 }
+
 
 .contact {
   position: relative;
