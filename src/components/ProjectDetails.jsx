@@ -1,7 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const ProjectDetails = ({ name, description, image, onClose }) => {
+  useEffect(() => {
+    // Disable body scrolling when the overlay is open
+    document.body.style.overflow = 'hidden';
+    return () => {
+      // Re-enable body scrolling when the overlay is closed
+      document.body.style.overflow = 'auto';
+    };
+  }, []);
+
   return (
     <AnimatePresence>
       <motion.div 

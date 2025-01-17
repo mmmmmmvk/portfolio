@@ -18,6 +18,16 @@ const ProjectItem = ({ image, name, description, index }) => {
     }
   };
 
+  const handleViewDetails = () => {
+    setShowDetails(true);
+    setIsHovered(false); // Reset hover state when opening details
+  };
+
+  const handleCloseDetails = () => {
+    setShowDetails(false);
+    setIsHovered(false); // Reset hover state when closing details
+  };
+
   return (
     <motion.div 
       className="project-item"
@@ -35,7 +45,7 @@ const ProjectItem = ({ image, name, description, index }) => {
         <img 
           src={image} 
           alt={name} 
-          onClick={() => setShowDetails(true)} 
+          onClick={handleViewDetails} 
           className="project-image" 
         />
         <motion.div 
@@ -47,7 +57,7 @@ const ProjectItem = ({ image, name, description, index }) => {
         >
           <h3>{name}</h3>
           <p className="project-preview">{description.substring(0, 100)}...</p>
-          <button className="view-details-btn">View Details</button>
+          <button className="view-details-btn" onClick={handleViewDetails}>View Details</button>
         </motion.div>
       </motion.div>
 
@@ -56,7 +66,7 @@ const ProjectItem = ({ image, name, description, index }) => {
           name={name}
           description={description}
           image={image}
-          onClose={() => setShowDetails(false)}
+          onClose={handleCloseDetails}
         />
       )}
     </motion.div>

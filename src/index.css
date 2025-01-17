@@ -240,9 +240,17 @@ body, html {
 }
 
 .project-preview {
+  font-family: 'Geist Regular', sans-serif;
   font-size: clamp(0.9rem, 1.5vw, 1rem);
   margin-bottom: 1.5rem;
   opacity: 0.8;
+}
+
+.details-text {
+  font-family: 'Geist Regular', sans-serif;
+  color: white;
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
+  line-height: 2;
 }
 
 
@@ -254,6 +262,7 @@ body, html {
   font-size: 1rem;
   cursor: pointer;
   transition: all 0.3s ease;
+  border-radius: 2rem;
 }
 
 .view-details-btn:hover {
@@ -375,7 +384,7 @@ h1 {
   display: block;
   overflow: hidden;
   white-space: nowrap;
-  padding-top: 10vh;
+  padding-top: 3vh;
 }
 
 .about {
@@ -383,7 +392,7 @@ h1 {
   display: block;
   overflow: hidden;
   white-space: nowrap;
-  padding-top: 10vh;
+  padding-top: 3vh;
 }
 
 h2 {
@@ -412,10 +421,12 @@ h3 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 10vh;
-  padding-bottom: 10vh;
-  max-width: 50%;
+  padding-top: 3vh;
+  padding-bottom: 3vh;
+  max-width: 100%;
+  text-align: center;
 }
+
 
 .tilt-container {
   display: flex;
@@ -483,10 +494,43 @@ h3 {
   padding-top: 5vh;
 }
 
+.projects-title {
+  padding-top: 2vh;
+}
+
 .projects-main-container {
   padding: 2rem max(2rem, 5vw);
   min-height: 100vh;
   background-color: #000000;
+}
+
+.about-main-container {
+  padding: 2rem max(2rem, 5vw);
+  min-height: 100vh;
+  background-color: #000000;
+}
+
+.contact-main-container {
+  padding: 2rem max(2rem, 5vw);
+  min-height: 100vh;
+  background-color: #000000;
+}
+
+.contact-socials {
+  display: flex;
+  padding-top: 2vh;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem; /* Adjust the gap between icons as needed */
+}
+
+.contact-socials a {
+  display: inline-block;
+}
+
+.contact-socials img {
+  width: 35px; /* Adjust the size of the icons as needed */
+  height: 35px;
 }
 
 .projects-grid {
@@ -496,6 +540,9 @@ h3 {
   width: 100%;
 }
 
+.section-title {
+  padding: 2vh 0;
+}
 
 
 .canvas {
@@ -692,6 +739,76 @@ h3 {
     padding-right: 10vw;
   }
 
+}
+
+.logo-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  width: 100%;
+  max-height: 150px;
+  filter: brightness(100);
+}
+
+.imprint {
+  max-width: 300px;
+}
+
+.imprint p {
+  font-family: 'Geist Light', sans-serif;
+  color: white;
+  font-size: 1rem;
+  text-align: left;
+}
+
+.contact-form-container {
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: #000000;
+  border-radius: 8px;
+  border: 1px solid #ffffff;
+  font-family: 'Geist Regular', sans-serif;
+  color: white;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form label {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #000000;
+  color: white;
+}
+
+.contact-form button {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  background-color: #000000;
+  color: white;
+  cursor: pointer;
+  border: 1px solid #ffffff;
+  border-radius: 2rem;
+}
+
+.contact-form button:hover {
+  background-color: #ffffff;
+  color: #000000;
+  transition: all 0.3s ease-in-out;
 }
 
 @media (max-width: 1024px) {
