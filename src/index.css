@@ -745,6 +745,14 @@ h3 {
 
 @media (max-width: 768px) {
 
+  .scroll-indicator {
+    height: 30vH;
+    top: 35%;
+  }
+
+  .scroll-bar {
+    height: 40px;
+  }
 
 
   .project-overlay {
