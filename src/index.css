@@ -625,11 +625,15 @@ h3 {
   display: none;
 }
 
-@media (max-width: 1482px) {
+.introduction, .skills {
+  padding-left: 5vw;
+  padding-right: 5vw;
+}
+
+@media (max-width: 1400px) {
   .projects-row {
     flex-direction: column;
   }
-
 
   .tilt-container {
     flex-direction: column;
@@ -655,7 +659,7 @@ h3 {
   }
 }
 
-@media (max-width: 920px) {
+@media (max-width: 1024px) {
 
   #hamburger {
     display: unset;
@@ -664,8 +668,6 @@ h3 {
   .header {
     display: none;
   }
-
-
 
   .hamburger-menu {
     display: block;
@@ -691,22 +693,22 @@ h3 {
   }
 
   .skills {
-    padding-left: 10vw;
-    padding-right: 10vw;
+    padding-left: 8vw;
+    padding-right: 8vw;
   }
 
   h1 {
     text-align: center;
     justify-content: center;
     padding: 0;
-    font-size: 2em;
+    font-size: 2.5em;
   }
 
   h2 {
     text-align: center;
     justify-content: center;
     padding: 0;
-    font-size: 1.5em;
+    font-size: 2em;
   }
 
   .skills {
@@ -734,7 +736,30 @@ h3 {
   }
 
   .projectpreview {
+    font-size: 1.8em;
+    padding-left: 8vw;
+    padding-right: 8vw;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .skills {
+    padding-left: 10vw;
+    padding-right: 10vw;
+  }
+
+  h1 {
     font-size: 2em;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  .projectpreview {
+    font-size: 1.5em;
     padding-left: 10vw;
     padding-right: 10vw;
   }
