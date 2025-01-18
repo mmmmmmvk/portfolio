@@ -745,6 +745,50 @@ h3 {
 
 @media (max-width: 768px) {
 
+
+
+  .project-overlay {
+    opacity: 1 !important;
+    background: transparent !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 10px;
+    width: 100%;
+  }
+
+  .project-overlay .view-details-btn {
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.8); ;
+    margin: 5px 0;
+    padding: 10px;
+  }
+
+  .project-overlay h3 {
+    background: rgba(0, 0, 0, 0.8); /* Slightly visible background */
+    color: white;
+    padding: 10px;
+    border-radius: 0px;
+    margin: 5px 0;
+  }
+
+  .project-overlay h3 {
+    margin: 0;
+    padding: 0;
+    font-size: 1.2em;
+  }
+
+  .project-overlay .project-preview {
+    display: none;
+  }
+
+  .project-overlay .view-details-btn {
+    margin-bottom: 30px;
+    font-size: 1em;
+  }
+
+
   .skills {
     padding-left: 10vw;
     padding-right: 10vw;

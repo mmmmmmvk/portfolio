@@ -56,7 +56,7 @@ const About = () => {
         <motion.div className='imprint'>
           <h3>
             <br />
-            Imprint
+            Impressum
           </h3>
           <p>
             Angaben gemäß § 5 TMG
@@ -73,7 +73,7 @@ const About = () => {
             <br />
             Telefon: +49 (0) 123 456789
             <br />
-            E-Mail: info@musterfirma.dea
+            E-Mail: info@musterfirma.de
             <br />
             Website: www.musterfirma.de
           </p>

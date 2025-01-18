@@ -18,15 +18,15 @@ export function Wordmark(props) {
         samples: { value: 10, min: 1, max: 32, step: 1 },
         resolution: { value: 2048, min: 256, max: 2048, step: 256 },
         transmission: { value: 1, min: 0, max: 1 },
-        roughness: { value: 0.0, min: 0, max: 1, step: 0.01 },
+        roughness: { value: 0.45, min: 0, max: 1, step: 0.01 },
         thickness: { value: 10, min: 0, max: 10, step: 0.01 },
-        ior: { value: 1.45, min: 1, max: 5, step: 0.01 },
-        chromaticAberration: { value: 0.03, min: 0, max: 1 },
+        ior: { value: 1, min: 1, max: 5, step: 0.01 },
+        chromaticAberration: { value: 0.01, min: 0, max: 1 },
         anisotropy: { value: 1, min: 0, max: 1, step: 0.01 },
         distortion: { value: 1, min: 0, max: 1, step: 0.01 },
         distortionScale: { value: 0.18, min: 0.01, max: 1, step: 0.01 },
-        clearcoat: { value: 0, min: 0, max: 1 },
-        reflectivity: { value: 0.43, min: 0, max: 1 },
+        clearcoat: { value: 0.08, min: 0, max: 1 },
+        reflectivity: { value: 0.02, min: 0, max: 1 },
         attenuationColor: '#ffffff',
         color: '#ffffff',
         bg: '#000000',
@@ -36,7 +36,7 @@ export function Wordmark(props) {
   const { viewport } = useThree()
   return (
     <>
-    <Leva hidden/>
+    <Leva hidden />
     <group className="wordmark"  {...props} dispose={null} scale={viewport.width+280 / viewport.height}>
       <mesh geometry={nodes['Voronoi-Bruch'].geometry} >
       {config.meshPhysicalMaterial ? <meshPhysicalMaterial {...config} /> : <MeshTransmissionMaterial background={new THREE.Color(config.bg)} {...config} />} 
